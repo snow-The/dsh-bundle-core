@@ -1,0 +1,17 @@
+# @snow-the/dsh-bundle-core — 基礎信任面：總線、快照、插件健檢、會話修復
+#
+# 聚合包：只插入成員的 row，不搬移任何程式碼。成員仍是獨立套件，可單獨安裝。
+# 三條規則（實測自官方 dsh-base）：後寫的 patch 以 id 覆蓋前面的；patch 取代整個
+# config 而非合併；row 順序沒有載入語意。
+#
+# 因此 profile 的 dsh.profile.bundles 只能列這個聚合包，不能同時列成員
+# （同一個 id 被兩層宣告時，後者會靜默勝出）。
+- insert:
+    - id: session-bus
+      name: '@snow-the/dsh-session-bus'
+    - id: snapshot
+      name: '@snow-the/dsh-snapshot'
+    - id: plugin-doctor
+      name: '@snow-the/dsh-plugin-doctor'
+    - id: session-repair
+      name: '@snow-the/dsh-session-repair'

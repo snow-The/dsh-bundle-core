@@ -1,0 +1,21 @@
+{
+  "name": "@snow-the/dsh-bundle-core",
+  "version": "0.1.0",
+  "private": true,
+  "description": "基礎信任面：總線、快照、插件健檢、會話修復",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
