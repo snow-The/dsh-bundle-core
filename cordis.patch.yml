@@ -15,3 +15,6 @@
       name: '@snow-the/dsh-plugin-doctor'
     - id: session-repair
       name: '@snow-the/dsh-session-repair'
+    # 注意：dsh-memory **不在這裡**宣告。它由 profile 的 dsh.profile.bundles 直接列出
+    # （與 dsh-session-handoff 同一種掛法）。同一個 id 被兩層宣告時後者會靜默勝出，
+    # 所以只能在一個地方宣告 —— 第一次我兩邊都寫了，是錯的。
